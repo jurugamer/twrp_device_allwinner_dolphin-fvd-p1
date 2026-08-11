@@ -5,4 +5,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/allwinner/dolphin-fvd-p1
+LOCAL_PATH := device/allwinner/dolphin_fvd_p1

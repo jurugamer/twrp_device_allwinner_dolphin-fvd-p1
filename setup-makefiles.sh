@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=dolphin-fvd-p1
+DEVICE=dolphin_fvd_p1
 VENDOR=allwinner
 
 # Load extract_utils and do some sanity checks

@@ -1,4 +1,4 @@
-# Android device tree for Allwinner dolphin (dolphin-fvd-p1)
+# Android device tree for Allwinner dolphin (dolphin_fvd_p1)
 
 ```
 #

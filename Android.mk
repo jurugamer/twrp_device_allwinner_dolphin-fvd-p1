@@ -7,6 +7,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),dolphin-fvd-p1)
+ifeq ($(TARGET_DEVICE),dolphin_fvd_p1)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif

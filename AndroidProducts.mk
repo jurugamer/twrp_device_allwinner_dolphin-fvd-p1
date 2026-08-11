@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_dolphin-fvd-p1.mk
+    $(LOCAL_DIR)/omni_dolphin_fvd_p1.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_dolphin-fvd-p1-user \
-    omni_dolphin-fvd-p1-userdebug \
-    omni_dolphin-fvd-p1-eng
+    omni_dolphin_fvd_p1-user \
+    omni_dolphin_fvd_p1-userdebug \
+    omni_dolphin_fvd_p1-eng
