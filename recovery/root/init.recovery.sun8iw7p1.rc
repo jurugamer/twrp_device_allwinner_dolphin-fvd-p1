@@ -7,6 +7,13 @@ on init
 
     mkdir /extsd
     mkdir /bootloader
+
+    # Links simbolicos nativos para criar a pasta /dev/block/by-name
+    symlink /dev/block/platform/soc/1c0f0000.mmc/by-name /dev/block/by-name
+    symlink /dev/block/platform/soc.0/1c0f0000.mmc/by-name /dev/block/by-name
+    symlink /dev/block/platform/1c0f0000.mmc/by-name /dev/block/by-name
+    symlink /dev/block/platform/sunxi-mmc.0/by-name /dev/block/by-name
+
     exec /sbin/busybox sh /sbin/init_parttion.sh
 
 service console /sbin/sh
