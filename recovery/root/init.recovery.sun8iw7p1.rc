@@ -8,13 +8,18 @@ on init
     mkdir /extsd
     mkdir /bootloader
 
-    # Links simbolicos nativos para criar a pasta /dev/block/by-name
-    symlink /dev/block/platform/soc/1c0f0000.mmc/by-name /dev/block/by-name
-    symlink /dev/block/platform/soc.0/1c0f0000.mmc/by-name /dev/block/by-name
-    symlink /dev/block/platform/1c0f0000.mmc/by-name /dev/block/by-name
-    symlink /dev/block/platform/sunxi-mmc.0/by-name /dev/block/by-name
-
-    exec /sbin/busybox sh /sbin/init_parttion.sh
+on fs
+    # Mapeamento oficial dos blocos NAND para a pasta by-name
+    mkdir /dev/block/by-name 0755 root root
+    symlink /dev/block/nanda /dev/block/by-name/bootloader
+    symlink /dev/block/nandb /dev/block/by-name/env
+    symlink /dev/block/nandc /dev/block/by-name/boot
+    symlink /dev/block/nandd /dev/block/by-name/system
+    symlink /dev/block/nandf /dev/block/by-name/misc
+    symlink /dev/block/nandg /dev/block/by-name/recovery
+    symlink /dev/block/nandh /dev/block/by-name/cache
+    symlink /dev/block/nandn /dev/block/by-name/UDISK
+    symlink /dev/block/nandn /dev/block/by-name/data
 
 service console /sbin/sh
     console
